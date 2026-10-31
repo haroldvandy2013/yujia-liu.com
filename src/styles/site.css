@@ -1,0 +1,58 @@
+.site-header {
+  padding-block: var(--wp--custom--gap--vertical);
+}
+
+.wp-block-media-text.home-panel {
+  grid-template-columns: auto 37%;
+}
+
+.home-biography > p {
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.contact-panel {
+  padding-block: 3vh;
+}
+
+.contact-panel > h5 {
+  text-align: center;
+}
+
+.contact-panel a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.research-content > :is(h2, h4, p) {
+  max-width: var(--wp--style--global--wide-size);
+}
+
+.research-content > p {
+  /* Keep the original h5 typography while writing abstracts as Markdown paragraphs. */
+  font-family: var(--wp--preset--font-family--eb-garamond);
+  font-size: var(--wp--custom--font-sizes--normal);
+  font-weight: var(--wp--custom--heading--typography--font-weight);
+  line-height: var(--wp--custom--heading--typography--line-height);
+}
+
+.wp-block-media-text.cv-panel {
+  color: #454545;
+  background-color: #fefefe;
+  grid-template-columns: auto 33%;
+}
+
+.cv-copy {
+  padding: 30px 30px 0;
+}
+
+.cv-title {
+  color: #0a0a0a;
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}

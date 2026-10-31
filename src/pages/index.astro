@@ -1,0 +1,30 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { Content as Biography, frontmatter } from '../content/home.md';
+import { Content as Contact } from '../content/contact.md';
+import { localUrl, imageSrcset } from '../lib/urls';
+---
+
+<SiteLayout title={frontmatter.title} description={frontmatter.description} path="/" bodyClass="home page-template-header-footer-only">
+  <div class="is-layout-constrained entry-content wp-block-post-content">
+    <div class="is-layout-flow wp-container-9 wp-block-group alignwide">
+      <div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile home-panel">
+        <div class="wp-block-media-text__content home-biography">
+          <Biography />
+          <div style="height:2px" aria-hidden="true" class="wp-block-spacer"></div>
+          <div class="is-layout-constrained wp-block-group">
+            <div style="height:0px" aria-hidden="true" class="wp-block-spacer"></div>
+          </div>
+        </div>
+        <figure class="wp-block-media-text__media">
+          <img width="918" height="718" src={localUrl(frontmatter.photo)} alt={frontmatter.photoAlt}
+            decoding="async" srcset={imageSrcset(frontmatter.photoSizes)}
+            sizes="(max-width: 918px) 100vw, 918px" />
+        </figure>
+      </div>
+      <div class="is-layout-constrained wp-block-group alignwide has-background-color has-foreground-background-color has-text-color has-background contact-panel">
+        <Contact />
+      </div>
+    </div>
+  </div>
+</SiteLayout>

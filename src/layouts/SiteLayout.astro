@@ -1,0 +1,46 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import { site, images } from '../config';
+import { localUrl } from '../lib/urls';
+import '../styles/site.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  path: string;
+  bodyClass?: string;
+}
+const { title, description = site.tagline, path, bodyClass = '' } = Astro.props;
+const canonical = new URL(path, Astro.site).href;
+const pageTitle = `${title} - ${site.name}`;
+---
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={localUrl(images.icon)} />
+    <link rel="stylesheet" href={localUrl('styles/fonts.css')} />
+    <link rel="stylesheet" href={localUrl('wp-includes/blocks/navigation/style.min.css')} />
+    <link rel="stylesheet" href={localUrl('styles/original-theme.css')} />
+    <link rel="stylesheet" href={localUrl('wp-content/themes/blockbase/assets/ponyfill.css')} />
+  </head>
+  <body class:list={['page', 'wp-custom-logo', 'wp-embed-responsive', bodyClass]}>
+    <a class="skip-link screen-reader-text" href="#wp--skip-link--target">Skip to content</a>
+    <div class="wp-site-blocks">
+      <SiteHeader currentPath={path} />
+      <main id="wp--skip-link--target" class="is-layout-flow wp-block-group">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

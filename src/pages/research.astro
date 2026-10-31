@@ -1,0 +1,11 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { Content, frontmatter } from '../content/research.md';
+---
+
+<SiteLayout title={frontmatter.title} path="/research/">
+  <div class="is-layout-constrained entry-content wp-block-post-content research-content">
+    <Content />
+    <h4 class="alignwide" aria-hidden="true"></h4>
+  </div>
+</SiteLayout>

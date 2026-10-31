@@ -1,0 +1,284 @@
+{
+  "source": "https://yujia-liu.com/",
+  "captured_on": "2026-10-31",
+  "pages": [
+    {
+      "source": "https://yujia-liu.com/",
+      "path": "index.html"
+    },
+    {
+      "source": "https://yujia-liu.com/research/",
+      "path": "research/index.html"
+    },
+    {
+      "source": "https://yujia-liu.com/cv/",
+      "path": "cv/index.html"
+    }
+  ],
+  "assets": [
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-400-800-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-400-800-italic.woff2",
+      "source_sha256": "0654116ae09b2e7a1072361e22bffc138e6c57749e2c15b90fc0c061cfcfee08",
+      "sha256": "0654116ae09b2e7a1072361e22bffc138e6c57749e2c15b90fc0c061cfcfee08",
+      "bytes": 41220
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-400-800.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-400-800.woff2",
+      "source_sha256": "90e4038fbd361af9447b836e25ae3fb0740c575fd847f352711f21459a502fc1",
+      "sha256": "90e4038fbd361af9447b836e25ae3fb0740c575fd847f352711f21459a502fc1",
+      "bytes": 40148
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-400-800-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-400-800-italic.woff2",
+      "source_sha256": "0516a412cf55a66b8c73d2662dc9a2b4c1938dcb2cb14485a96708c61e5d5ee2",
+      "sha256": "0516a412cf55a66b8c73d2662dc9a2b4c1938dcb2cb14485a96708c61e5d5ee2",
+      "bytes": 26088
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-400-800.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-400-800.woff2",
+      "source_sha256": "8c9ea85b6ef5926060f8b09cb403de89e9ff23df5277c679cf6e814e6992a1ba",
+      "sha256": "8c9ea85b6ef5926060f8b09cb403de89e9ff23df5277c679cf6e814e6992a1ba",
+      "bytes": 25764
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-ext-400-800-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-ext-400-800-italic.woff2",
+      "source_sha256": "b825ad73f35f982023e7b6797c82ad534d25c63a48b1b47211f9d826fadb3154",
+      "sha256": "b825ad73f35f982023e7b6797c82ad534d25c63a48b1b47211f9d826fadb3154",
+      "bytes": 35212
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-ext-400-800.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-cyrillic-ext-400-800.woff2",
+      "source_sha256": "8be52a6cd539dbf82db960beecbb13a23fa4a9c5088f78e164b0657edc4a08f2",
+      "sha256": "8be52a6cd539dbf82db960beecbb13a23fa4a9c5088f78e164b0657edc4a08f2",
+      "bytes": 33612
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-400-800-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-400-800-italic.woff2",
+      "source_sha256": "77c9840d5be29631f9cd9b6791bc12f162e74a4957a782dcdf16b8b4823f068c",
+      "sha256": "77c9840d5be29631f9cd9b6791bc12f162e74a4957a782dcdf16b8b4823f068c",
+      "bytes": 19536
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-400-800.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-400-800.woff2",
+      "source_sha256": "4b04ced6a3c5e3f81eca258011fd8b051fe9aea22b110a69f51aaa18a2f85a8c",
+      "sha256": "4b04ced6a3c5e3f81eca258011fd8b051fe9aea22b110a69f51aaa18a2f85a8c",
+      "bytes": 19780
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-ext-400-800-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-ext-400-800-italic.woff2",
+      "source_sha256": "593e4fdca0f844f7a58034fb4ba3300aebfb78f0cefc844b432764502067cfc4",
+      "sha256": "593e4fdca0f844f7a58034fb4ba3300aebfb78f0cefc844b432764502067cfc4",
+      "bytes": 12020
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-ext-400-800.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-greek-ext-400-800.woff2",
+      "source_sha256": "eef5a129d9d32b36413e6b48305735151471419fff905e5f5403478f7b24e27d",
+      "sha256": "eef5a129d9d32b36413e6b48305735151471419fff905e5f5403478f7b24e27d",
+      "bytes": 14920
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-latin-ext-400-800-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-latin-ext-400-800-italic.woff2",
+      "source_sha256": "3d60379e0e7456a72f9450d942155e359a1d17e806b3e0ce903f1fba7acb6801",
+      "sha256": "3d60379e0e7456a72f9450d942155e359a1d17e806b3e0ce903f1fba7acb6801",
+      "bytes": 72308
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-latin-ext-400-800.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-latin-ext-400-800.woff2",
+      "source_sha256": "4b33587c051b51dca9f81e628d0647c700cb0983f734ed8b349514e6acd91497",
+      "sha256": "4b33587c051b51dca9f81e628d0647c700cb0983f734ed8b349514e6acd91497",
+      "bytes": 75912
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-vietnamese-400-800-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-vietnamese-400-800-italic.woff2",
+      "source_sha256": "a5953b640d94af37cf590c9d9888a138ddf5a5bdcc9380a7d56b272e52c4e485",
+      "sha256": "a5953b640d94af37cf590c9d9888a138ddf5a5bdcc9380a7d56b272e52c4e485",
+      "bytes": 11972
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-vietnamese-400-800.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/eb-garamond/eb-garamond-vietnamese-400-800.woff2",
+      "source_sha256": "c589d3de82728724ef0a3486e64f3eb0f78e9bd7bed65ba805ba90e05c2c6d1e",
+      "sha256": "c589d3de82728724ef0a3486e64f3eb0f78e9bd7bed65ba805ba90e05c2c6d1e",
+      "bytes": 12240
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-100-900-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-100-900-italic.woff2",
+      "source_sha256": "b2da282c96d24f94cb5e98bb52d5d4963e12c8583dd003195cd2421cfe1d7d35",
+      "sha256": "b2da282c96d24f94cb5e98bb52d5d4963e12c8583dd003195cd2421cfe1d7d35",
+      "bytes": 46152
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-100-900.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-100-900.woff2",
+      "source_sha256": "e848f722b2e315eb9bf73d6a60ac4f86ac52e7b3287c8535cf2b98dc62363edf",
+      "sha256": "e848f722b2e315eb9bf73d6a60ac4f86ac52e7b3287c8535cf2b98dc62363edf",
+      "bytes": 48472
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-latin-ext-100-900-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-latin-ext-100-900-italic.woff2",
+      "source_sha256": "f99d6f48446b91d025f65925cc2234d9de33830a193778f3e6d88f8d75d03edf",
+      "sha256": "f99d6f48446b91d025f65925cc2234d9de33830a193778f3e6d88f8d75d03edf",
+      "bytes": 27652
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-latin-ext-100-900.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-latin-ext-100-900.woff2",
+      "source_sha256": "4ac06f01cb7955bf103af8eadb94d57c0babd22108d059ee57c759abf27846c6",
+      "sha256": "4ac06f01cb7955bf103af8eadb94d57c0babd22108d059ee57c759abf27846c6",
+      "bytes": 31136
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-vietnamese-100-900-italic.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-vietnamese-100-900-italic.woff2",
+      "source_sha256": "a59ab5d9190cec641b5151e14502a6fd7c1bd86e0bab28d5162f0bab59101505",
+      "sha256": "a59ab5d9190cec641b5151e14502a6fd7c1bd86e0bab28d5162f0bab59101505",
+      "bytes": 9836
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-vietnamese-100-900.woff2",
+      "path": "wp-content/themes/blockbase/assets/fonts/work-sans/work-sans-vietnamese-100-900.woff2",
+      "source_sha256": "4d84736256a6768e4230ab0fc8aba16b4a8b6f239324dc22dadf92736614ff9c",
+      "sha256": "4d84736256a6768e4230ab0fc8aba16b4a8b6f239324dc22dadf92736614ff9c",
+      "bytes": 10156
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/ponyfill.css?ver=0.0.4",
+      "path": "wp-content/themes/blockbase/assets/ponyfill.css",
+      "source_sha256": "ae304755cbb5b8a9126f09b4de0f816933c78e80275786fb755b32d05e0b75c4",
+      "sha256": "dd3769893f27854c792b7301c56f0b8adc627507f038c70cba525c3cb4174cc2",
+      "bytes": 30225
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/svg/post-author.svg",
+      "path": "wp-content/themes/blockbase/assets/svg/post-author.svg",
+      "source_sha256": "097803ebfbd415e8516e160c31c17ed2798af6a26ae918de6174de6d8e9e432b",
+      "sha256": "097803ebfbd415e8516e160c31c17ed2798af6a26ae918de6174de6d8e9e432b",
+      "bytes": 704
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/svg/post-category.svg",
+      "path": "wp-content/themes/blockbase/assets/svg/post-category.svg",
+      "source_sha256": "54d76fcb879051f7d0bab5000f6776d33be77d678e6433f49f52b015cfade814",
+      "sha256": "54d76fcb879051f7d0bab5000f6776d33be77d678e6433f49f52b015cfade814",
+      "bytes": 725
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/svg/post-date.svg",
+      "path": "wp-content/themes/blockbase/assets/svg/post-date.svg",
+      "source_sha256": "73806d03f0489154264441fe76fa203b59fa1a181e23a89d544e819e29219c68",
+      "sha256": "73806d03f0489154264441fe76fa203b59fa1a181e23a89d544e819e29219c68",
+      "bytes": 705
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/blockbase/assets/svg/post-tag.svg",
+      "path": "wp-content/themes/blockbase/assets/svg/post-tag.svg",
+      "source_sha256": "bf8254066c280911e792bd8c95ae5fe6d392866b93ef4c1260030f157e8bc04b",
+      "sha256": "bf8254066c280911e792bd8c95ae5fe6d392866b93ef4c1260030f157e8bc04b",
+      "bytes": 742
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/themes/marl/assets/theme.css?ver=0.0.4",
+      "path": "wp-content/themes/marl/assets/theme.css",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2022/11/cropped-2013-09-05-19.04.16-773610635-e1668841914922-150x150.jpg",
+      "path": "wp-content/uploads/2022/11/cropped-2013-09-05-19.04.16-773610635-e1668841914922-150x150.jpg",
+      "source_sha256": "037204ce8a45a77f23f21d83cf9d1922e22a96a8c4eb8f040676f5f771a589c0",
+      "sha256": "037204ce8a45a77f23f21d83cf9d1922e22a96a8c4eb8f040676f5f771a589c0",
+      "bytes": 4720
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2022/11/cropped-2013-09-05-19.04.16-773610635-e1668841914922-300x300.jpg",
+      "path": "wp-content/uploads/2022/11/cropped-2013-09-05-19.04.16-773610635-e1668841914922-300x300.jpg",
+      "source_sha256": "3c92487acdd491e0171d91c9715c268873f981aee2117f9166f3bb0e94f6965b",
+      "sha256": "3c92487acdd491e0171d91c9715c268873f981aee2117f9166f3bb0e94f6965b",
+      "bytes": 13892
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2022/11/cropped-2013-09-05-19.04.16-773610635-e1668841914922.jpg",
+      "path": "wp-content/uploads/2022/11/cropped-2013-09-05-19.04.16-773610635-e1668841914922.jpg",
+      "source_sha256": "0015a87d0b9e6fda4305b9ec800416bab41a46a57bb7908da7246a36d6c391af",
+      "sha256": "0015a87d0b9e6fda4305b9ec800416bab41a46a57bb7908da7246a36d6c391af",
+      "bytes": 146337
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2022/11/img_2981-1.jpg?w=1024",
+      "path": "wp-content/uploads/2022/11/img_2981-1-0c31d10755.jpg",
+      "source_sha256": "bf0f762e3879e0111412ab09f10e4213c8705e4e7509380217515b62b5041192",
+      "sha256": "bf0f762e3879e0111412ab09f10e4213c8705e4e7509380217515b62b5041192",
+      "bytes": 1301947
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM-300x235.png",
+      "path": "wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM-300x235.png",
+      "source_sha256": "ec3ea83940e9c4f7f957a54e4d74a274504bc7c22b6b060bda45f4cf79a57d73",
+      "sha256": "ec3ea83940e9c4f7f957a54e4d74a274504bc7c22b6b060bda45f4cf79a57d73",
+      "bytes": 103284
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM-768x601.png",
+      "path": "wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM-768x601.png",
+      "source_sha256": "fa33c622ecbddce3c04467370db8fb347d0e317053e5a0e5fdedc2f6e1e9c7a6",
+      "sha256": "fa33c622ecbddce3c04467370db8fb347d0e317053e5a0e5fdedc2f6e1e9c7a6",
+      "bytes": 574332
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM.png",
+      "path": "wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM.png",
+      "source_sha256": "b0f2340fc76333b64341a27f7cd7105843869a51edccabd1807f36e619400446",
+      "sha256": "b0f2340fc76333b64341a27f7cd7105843869a51edccabd1807f36e619400446",
+      "bytes": 1104264
+    },
+    {
+      "source": "https://yujia-liu.com/wp-content/uploads/2025/07/CV_Yujia-Liu_short.pdf",
+      "path": "wp-content/uploads/2025/07/CV_Yujia-Liu_short.pdf",
+      "source_sha256": "4ba4b3fed4853a9451b3a6918e7a668ee33701ef68875b2801aa710ad29de45b",
+      "sha256": "4ba4b3fed4853a9451b3a6918e7a668ee33701ef68875b2801aa710ad29de45b",
+      "bytes": 130481
+    },
+    {
+      "source": "https://yujia-liu.com/wp-includes/blocks/navigation/style.min.css?ver=6.1.1",
+      "path": "wp-includes/blocks/navigation/style.min.css",
+      "source_sha256": "0942c38775c4203f6381c2cb580e68703fc88211183a6fa10d58f25cf4e55e58",
+      "sha256": "0942c38775c4203f6381c2cb580e68703fc88211183a6fa10d58f25cf4e55e58",
+      "bytes": 15342
+    },
+    {
+      "source": "https://yujia-liu.com/wp-includes/blocks/navigation/view-modal.min.js?ver=45f05135277abf0b0408",
+      "path": "wp-includes/blocks/navigation/view-modal.min.js",
+      "source_sha256": "00e1af7b16907296a301c46673a14580e1ea6cddb825d2a68724b60150b4733f",
+      "sha256": "00e1af7b16907296a301c46673a14580e1ea6cddb825d2a68724b60150b4733f",
+      "bytes": 7779
+    },
+    {
+      "source": "https://yujia-liu.com/wp-includes/blocks/navigation/view.min.js?ver=c24330f635f5cb9d5e0e",
+      "path": "wp-includes/blocks/navigation/view.min.js",
+      "source_sha256": "3fbef27e01fa9ced2747df8e9ff7fff63d2c1c511027193cdf7937e3d0517863",
+      "sha256": "3fbef27e01fa9ced2747df8e9ff7fff63d2c1c511027193cdf7937e3d0517863",
+      "bytes": 1144
+    }
+  ],
+  "removed": [
+    "WordPress API, feeds, editor discovery and generator metadata",
+    "Legacy WordPress emoji loader (modern browsers render native Unicode)",
+    "Unused comment-reply script (no public comment form or comments)"
+  ]
+}

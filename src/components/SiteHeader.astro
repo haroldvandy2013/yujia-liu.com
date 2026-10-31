@@ -1,0 +1,62 @@
+---
+import { site, images } from '../config';
+import { localUrl, imageSrcset } from '../lib/urls';
+
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+---
+
+<header class="wp-block-template-part">
+  <div class="is-layout-constrained wp-block-group gapless-group">
+    <div class="is-content-justification-space-between is-layout-flex wp-container-5 wp-block-group alignwide site-header">
+      <div class="is-layout-flex wp-block-group site-brand">
+        <div class="is-style-rounded wp-block-site-logo">
+          <a href={localUrl('/')} class="custom-logo-link" rel="home" aria-current={currentPath === '/' ? 'page' : undefined}>
+            <img width="64" height="64" src={localUrl(images.logo)} alt={site.name}
+              class="custom-logo" decoding="async" srcset={imageSrcset(images.logoSizes)}
+              sizes="(max-width: 64px) 100vw, 64px" />
+          </a>
+        </div>
+        <div class="is-layout-flow wp-block-group">
+          <h1 class="wp-block-site-title">
+            <a href={localUrl('/')} rel="home" aria-current={currentPath === '/' ? 'page' : undefined}>{site.name}</a>
+          </h1>
+          <p class="wp-block-site-tagline">{site.tagline}</p>
+        </div>
+      </div>
+      <nav class="is-horizontal is-content-justification-right is-layout-flex wp-container-4 is-responsive items-justified-right social-links wp-block-navigation" aria-label="Navigation">
+        <button aria-haspopup="true" aria-label="Open menu" class="wp-block-navigation__responsive-container-open" data-micromodal-trigger="site-menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="4" y="7.5" width="16" height="1.5" /><rect x="4" y="15" width="16" height="1.5" />
+          </svg>
+        </button>
+        <div class="wp-block-navigation__responsive-container" id="site-menu">
+          <div class="wp-block-navigation__responsive-close" tabindex="-1" data-micromodal-close>
+            <div class="wp-block-navigation__responsive-dialog" aria-label="Menu">
+              <button aria-label="Close menu" data-micromodal-close class="wp-block-navigation__responsive-container-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z" />
+                </svg>
+              </button>
+              <div class="wp-block-navigation__responsive-container-content" id="site-menu-content">
+                <ul class="wp-block-navigation__container">
+                  {site.navigation.map(({ label, path }) => (
+                    <li class:list={['wp-block-navigation-item', 'wp-block-navigation-link', { 'current-menu-item': currentPath === path }]}>
+                      <a class="wp-block-navigation-item__content" href={localUrl(path)} aria-current={currentPath === path ? 'page' : undefined}>
+                        <span class="wp-block-navigation-item__label"><strong>{label}</strong></span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<script is:inline src={localUrl('wp-includes/blocks/navigation/view.min.js')}></script>
+<script is:inline src={localUrl('wp-includes/blocks/navigation/view-modal.min.js')}></script>

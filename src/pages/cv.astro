@@ -1,0 +1,31 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { Content, frontmatter } from '../content/cv.md';
+import { localUrl } from '../lib/urls';
+---
+
+<SiteLayout title={frontmatter.title} description={frontmatter.description} path="/cv/">
+  <div class="is-layout-constrained entry-content wp-block-post-content">
+    <div class="is-layout-flow wp-block-group alignfull">
+      <div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-vertically-aligned-bottom has-text-color has-background cv-panel">
+        <div class="wp-block-media-text__content">
+          <div class="is-layout-constrained wp-container-8 wp-block-group cv-copy">
+            <h2 class="has-text-color cv-title" id="boxed-water">{frontmatter.heading}</h2>
+            <div class="is-layout-flex wp-block-buttons">
+              <div class="wp-block-button is-style-fill">
+                <a class="wp-block-button__link wp-element-button" href={localUrl(frontmatter.pdf)}>
+                  <strong>{frontmatter.downloadLabel}</strong>
+                </a>
+              </div>
+            </div>
+            <Content />
+            <div style="height:110px" aria-hidden="true" class="wp-block-spacer"></div>
+          </div>
+        </div>
+        <figure class="wp-block-media-text__media">
+          <img src={localUrl(frontmatter.photo)} alt={frontmatter.photoAlt} decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</SiteLayout>
