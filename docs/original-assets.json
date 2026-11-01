@@ -1,4 +1,5 @@
 {
+  "role": "Historical provenance of the original snapshot, not a manifest of the current Astro build. Asset paths refer to the old snapshot; unused theme styles and scripts have been removed.",
   "source": "https://yujia-liu.com/",
   "captured_on": "2026-10-31",
   "pages": [

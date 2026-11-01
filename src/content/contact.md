@@ -1,1 +1,1 @@
-##### Contact: **yujia.liu@missouri.edu**
+Contact: **yujia.liu@missouri.edu**

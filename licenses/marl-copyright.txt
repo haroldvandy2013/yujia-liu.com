@@ -1,3 +1,5 @@
+Historical source attribution; not a theme configuration or runtime stylesheet.
+
 /*
 Theme Name: Marl
 Theme URI: https://wordpress.com/theme/marl

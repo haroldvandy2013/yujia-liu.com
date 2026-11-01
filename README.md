@@ -2,7 +2,7 @@
 
 这是学术主页的独立 Astro 实验版本，便于和[原静态 HTML 版](https://github.com/haroldvandy2013/yujia-liu.com)比较代码结构。原仓库、正式域名和 Azure 不变；本仓库使用私有源码，没有设置新的线上托管或自定义域名。
 
-保留首页 `/`、研究页 `/research/`、CV 页 `/cv/` 的内容、原主题外观、图片、字体与 CV PDF。来源是已验证的原静态版快照 `e7be650`，原 37 项资源及来源校验记录保留在 `public/` 和 `migration-manifest.json`。
+保留首页 `/`、研究页 `/research/`、CV 页 `/cv/` 的内容、配色、布局、图片、字体与 CV PDF。项目只使用 Astro、Markdown、原生 HTML/CSS/JavaScript；没有其他 UI 框架、CMS、旧主题兼容层或第三方菜单脚本。
 
 ## 先看这几个文件
 
@@ -23,14 +23,18 @@ src/
     research.astro         研究页布局
     cv.astro               CV 页布局
   lib/urls.ts              统一处理根路径和项目子路径
-  styles/site.css          站点自己的布局和样式调整
+  styles/site.css          全部站点布局、配色、响应式与菜单样式
 public/
-  wp-content/              原图片、PDF、字体和主题资源
-  wp-includes/             原导航样式和移动菜单脚本
-  styles/
-    fonts.css              原字体定义，包含全部语言子集
-    original-theme.css     去重后的原站主题样式，只引入一次
-licenses/                  上游版权、许可证和导航源码
+  images/                  标志、肖像及响应式尺寸、家乡照片
+  fonts/
+    fonts.css              本地字体定义，包含全部语言子集
+    eb-garamond/           标题及研究正文的字体文件
+    work-sans/             正文字体文件
+  documents/               CV PDF，页面使用这里的地址
+  wp-content/uploads/2025/07/
+    CV_Yujia-Liu_short.pdf  仅保留旧下载链接的兼容副本
+licenses/                  字体许可证及历史外观来源归属
+docs/original-assets.json  原静态快照的来源与校验记录，不是当前构建清单
 astro.config.mjs           静态构建、正式域名和部署 base 配置
 package.json               开发、检查、构建和预览命令
 package-lock.json          可复现的依赖版本
@@ -46,7 +50,7 @@ package-lock.json          可复现的依赖版本
 | 改姓名、副标题、导航 | 同步修改三个 HTML 页头 | 修改 `src/config.ts`，三页自动共用 |
 | 更改公共页头结构 | 三页分别改 | 只改 `SiteHeader.astro` |
 | 更新 PDF / 图片 | 替换资源并修改 HTML 链接 | 替换 `public/` 资源，修改 Markdown 顶部字段 |
-| 调整外观 | 修改各页重复样式 | 主要改 `src/styles/site.css` |
+| 调整外观 | 修改各页重复样式 | 修改独立的 `src/styles/site.css` |
 | 发布文件 | 仓库 HTML 本身就是网站 | 构建输出到 `dist/`，源码与产物分开 |
 
 Markdown 文件顶部 `---` 之间是页面字段（frontmatter）；下面是普通 Markdown 内容。例如研究条目保留题名、作者和完整摘要：
@@ -58,9 +62,13 @@ Markdown 文件顶部 `---` 之间是页面字段（frontmatter）；下面是�
 这里填写摘要。
 ```
 
-作者行末的反斜杠 `\` 是 Markdown 换行，作者与摘要仍在同一段。原研究页的摘要使用 h5 字体样式，新版用普通 Markdown 段落，并在 `site.css` 保留其视觉效果。原 “Revolving School Doors” 题名包含两个不同论文链接，新版保留了两者，不合并或丢失。
+作者行末的反斜杠 `\` 是 Markdown 换行，作者与摘要仍在同一段。研究摘要使用普通 Markdown 段落，并在 `site.css` 设置字体。原 “Revolving School Doors” 题名包含两个不同论文链接，新版保留了两者，不合并或丢失。
 
-修改 CV 时，可以覆盖 `public/wp-content/uploads/2025/07/CV_Yujia-Liu_short.pdf` 而无需改链接；如果更改位置，在 `src/content/cv.md` 更新 `pdf` 字段。图片路径也写在相应 Markdown 的 `photo` 字段中；首页更换肖像时同步更新 `photoSizes` 的文件和宽度。路径从 `public/` 内开始写，不包含 `public/` 本身，模板会自动补上部署 base。
+修改 CV 时，覆盖 `public/documents/CV_Yujia-Liu_short.pdf`；同时更新 `public/wp-content/uploads/2025/07/CV_Yujia-Liu_short.pdf` 的兼容副本，以免旧书签下载到过期版本。如果更改主文件位置，在 `src/content/cv.md` 更新 `pdf` 字段。这个旧路径只是 PDF 地址，不包含框架代码，也不被页面模板引用。
+
+图片位于 `public/images/`，路径写在相应 Markdown 的 `photo` 字段中；首页更换肖像时同步更新 `photoSizes` 的文件和宽度。标志和导航在 `src/config.ts` 修改。路径从 `public/` 内开始写，不包含 `public/` 本身，模板会自动补上部署 base。
+
+页头和三页布局使用语义化 HTML 与项目自己的类名。移动菜单在 `SiteHeader.astro` 中使用原生 `<dialog>` 和少量 JavaScript，支持打开、关闭、Esc、模态焦点管理及关闭后焦点恢复。禁用 JavaScript 时仍显示导航链接。
 
 ## 本地使用
 
@@ -102,9 +110,8 @@ BASE_PATH=/yujia-liu.com-astro/ npm run preview -- --host 127.0.0.1
 
 公开网站交付给浏览器的 HTML、CSS、JavaScript 和图片仍可被访客查看；源码仓库私有化不等于隐藏这些公开网页内容。
 
-## 保留的第三方资源
+## 资源与归属
 
-为了先比较代码组织而不重新设计网站，本版沿用原 Blockbase / Marl 的渲染样式和 WordPress 移动导航脚本。这些只是静态资源，运行时不需要 WordPress、PHP、数据库、账户管理或 Azure。原文中的论文和学者主页仍链接到对应第三方网站，不镜像其内容。
+20 个本地字体文件、7 张图片（含响应式尺寸）和 CV 保留原内容。旧主题样式、菜单脚本、未使用的 SVG 图标及空样式文件已删除；页面不再使用 `wp-*` 类名、CSS 变量或主题 API。原文中的论文和学者主页仍链接到对应第三方网站，不镜像其内容。
 
-WordPress / Automattic 主题为 GPL-2.0-or-later，EB Garamond / Work Sans 字体为 OFL-1.1，移动菜单包含 MIT 许可的 MicroModal。许可证、版权说明及未压缩导航源码保留在 `licenses/`。原资源目录和 `original-theme.css` 用作兼容层，日常修改优先放在 `src/`；网站文字、照片与 CV 不因第三方代码许可证改变权利归属。
-Astro comparison version of the yujia-liu.com academic website
+EB Garamond / Work Sans 字体使用 OFL-1.1，许可证保留在 `licenses/`。外观最初参考 WordPress / Automattic Blockbase、Marl（GPL-2.0-or-later），相应版权说明和 GPL 文本仍保留，不能为了清除关键词抹去归属；它们不作为运行时样式加载。`docs/original-assets.json` 仅记录原静态快照 `e7be650` 的来源与校验值，其中旧路径不代表当前资源结构。网站文字、照片与 CV 的权利不因第三方代码许可证改变。

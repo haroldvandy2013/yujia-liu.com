@@ -1,14 +1,14 @@
 ---
 title: Yujia Liu
 description: Postdoctoral scholar at the University of Missouri
-photo: wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM.png
+photo: images/portrait.png
 photoAlt: ""
 photoSizes:
-  - path: wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM.png
+  - path: images/portrait.png
     width: 918
-  - path: wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM-300x235.png
+  - path: images/portrait-300.png
     width: 300
-  - path: wp-content/uploads/2022/12/Screen-Shot-2022-12-04-at-9.11.34-PM-768x601.png
+  - path: images/portrait-768.png
     width: 768
 ---
 
