@@ -1,8 +1,8 @@
-# yujia-liu.com — Astro 对照版
+# yujia-liu.com
 
-这是学术主页的独立 Astro 项目，便于和[原静态 HTML 版](https://github.com/haroldvandy2013/yujia-liu.com)比较代码结构。本仓库已公开，并通过 GitHub Actions 发布 GitHub Pages；原仓库、正式域名和 Azure 不变，尚未绑定自定义域名。
+这是使用 Astro 和 Markdown 构建的学术主页。[原静态 HTML 版](https://github.com/haroldvandy2013/yujia-liu.com-backup)保存在独立备份仓库中。本仓库已公开，并通过 GitHub Actions 发布 GitHub Pages；正式域名和 Azure 不变，尚未绑定自定义域名。
 
-预览地址：<https://haroldvandy2013.github.io/yujia-liu.com-astro/>
+预览地址：<https://haroldvandy2013.github.io/yujia-liu.com/>
 
 保留首页 `/`、研究页 `/research/`、CV 页 `/cv/` 的内容、配色、布局、图片、字体与 CV PDF。项目只使用 Astro、Markdown、原生 HTML/CSS/JavaScript；没有其他 UI 框架、CMS、旧主题兼容层或第三方菜单脚本。
 
@@ -97,11 +97,11 @@ npm run preview -- --host 127.0.0.1
 测试项目子路径：
 
 ```sh
-BASE_PATH=/yujia-liu.com-astro/ npm run build
-BASE_PATH=/yujia-liu.com-astro/ npm run preview -- --host 127.0.0.1
+BASE_PATH=/yujia-liu.com/ npm run build
+BASE_PATH=/yujia-liu.com/ npm run preview -- --host 127.0.0.1
 ```
 
-打开 `http://127.0.0.1:4321/yujia-liu.com-astro/`。首页、内页导航、图片、字体、CSS 内部 URL 和 PDF 都兼容这个前缀。恢复根路径时重新运行不带 `BASE_PATH` 的构建和预览命令。
+打开 `http://127.0.0.1:4321/yujia-liu.com/`。首页、内页导航、图片、字体、CSS 内部 URL 和 PDF 都兼容这个前缀。恢复根路径时重新运行不带 `BASE_PATH` 的构建和预览命令。
 
 `SITE_URL` 控制站点域名，默认 `https://yujia-liu.com`；`BASE_PATH` 控制部署路径，默认 `/`。导航、资源、canonical 和 Open Graph URL 都使用部署前缀。不需要为了本地测试修改 DNS 或添加 `CNAME`。
 
@@ -109,7 +109,7 @@ BASE_PATH=/yujia-liu.com-astro/ npm run preview -- --host 127.0.0.1
 
 仓库 Settings → Pages 的 Source 使用 **GitHub Actions**。每次向 `main` 推送，`.github/workflows/pages.yml` 会使用 Node.js 24 运行 `npm ci`、`npm run check`、`npm run build`，然后发布 `dist/`。也可在 Actions 中选择 **Deploy Astro to GitHub Pages → Run workflow** 手动发布；部署结果显示在 `github-pages` environment 中。
 
-工作流通过官方 `actions/configure-pages` 读取实际站点的 `origin` 和 `base_path`，再传给 Astro，而不是把项目地址写死在模板里。目前使用 `https://haroldvandy2013.github.io` 和 `/yujia-liu.com-astro/`；以后在 Pages 配置自定义域名后，重新运行工作流会读取新的域名和根路径。
+工作流通过官方 `actions/configure-pages` 读取实际站点的 `origin` 和 `base_path`，再传给 Astro，而不是把项目地址写死在模板里。目前使用 `https://haroldvandy2013.github.io` 和 `/yujia-liu.com/`；以后在 Pages 配置自定义域名后，重新运行工作流会读取新的域名和根路径。
 
 **自定义域名留到下一步处理**：目前没有 `CNAME`，没有修改 DNS 或关闭 Azure。正式网站 `https://yujia-liu.com/` 仍由原 Azure 网站提供服务。本次不需要付费方案。
 
