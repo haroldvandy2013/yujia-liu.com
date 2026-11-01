@@ -10,7 +10,7 @@ interface Props {
   path: string;
 }
 const { title, description = site.tagline, path } = Astro.props;
-const canonical = new URL(path, Astro.site).href;
+const canonical = new URL(localUrl(path), Astro.site).href;
 const pageTitle = `${title} - ${site.name}`;
 ---
 

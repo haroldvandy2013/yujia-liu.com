@@ -1,6 +1,8 @@
 # yujia-liu.com — Astro 对照版
 
-这是学术主页的独立 Astro 实验版本，便于和[原静态 HTML 版](https://github.com/haroldvandy2013/yujia-liu.com)比较代码结构。原仓库、正式域名和 Azure 不变；本仓库使用私有源码，没有设置新的线上托管或自定义域名。
+这是学术主页的独立 Astro 项目，便于和[原静态 HTML 版](https://github.com/haroldvandy2013/yujia-liu.com)比较代码结构。本仓库已公开，并通过 GitHub Actions 发布 GitHub Pages；原仓库、正式域名和 Azure 不变，尚未绑定自定义域名。
+
+预览地址：<https://haroldvandy2013.github.io/yujia-liu.com-astro/>
 
 保留首页 `/`、研究页 `/research/`、CV 页 `/cv/` 的内容、配色、布局、图片、字体与 CV PDF。项目只使用 Astro、Markdown、原生 HTML/CSS/JavaScript；没有其他 UI 框架、CMS、旧主题兼容层或第三方菜单脚本。
 
@@ -38,6 +40,7 @@ docs/original-assets.json  原静态快照的来源与校验记录，不是当�
 astro.config.mjs           静态构建、正式域名和部署 base 配置
 package.json               开发、检查、构建和预览命令
 package-lock.json          可复现的依赖版本
+.github/workflows/pages.yml 检查、构建和发布 GitHub Pages
 ```
 
 ## 与原版有什么不同
@@ -100,15 +103,21 @@ BASE_PATH=/yujia-liu.com-astro/ npm run preview -- --host 127.0.0.1
 
 打开 `http://127.0.0.1:4321/yujia-liu.com-astro/`。首页、内页导航、图片、字体、CSS 内部 URL 和 PDF 都兼容这个前缀。恢复根路径时重新运行不带 `BASE_PATH` 的构建和预览命令。
 
-`SITE_URL` 仅控制 canonical 和 SEO 的正式域名，默认 `https://yujia-liu.com`；`BASE_PATH` 控制部署路径，默认 `/`，二者独立。不需要为了本地测试修改 DNS 或添加 `CNAME`。
+`SITE_URL` 控制站点域名，默认 `https://yujia-liu.com`；`BASE_PATH` 控制部署路径，默认 `/`。导航、资源、canonical 和 Open Graph URL 都使用部署前缀。不需要为了本地测试修改 DNS 或添加 `CNAME`。
 
-## 隐私与托管
+## GitHub Pages 发布
 
-本仓库为 **private**，当前只有所有者 `haroldvandy2013`（管理员）有源码访问和修改权限，没有其他协作者。`package.json` 的 `"private": true` 还会防止误把本项目发布到 npm，但 GitHub 私有访问控制由仓库设置负责。
+仓库 Settings → Pages 的 Source 使用 **GitHub Actions**。每次向 `main` 推送，`.github/workflows/pages.yml` 会使用 Node.js 24 运行 `npm ci`、`npm run check`、`npm run build`，然后发布 `dist/`。也可在 Actions 中选择 **Deploy Astro to GitHub Pages → Run workflow** 手动发布；部署结果显示在 `github-pages` environment 中。
 
-当前账户 GitHub Free 不支持私有仓库 GitHub Pages，因此**本版没有可承诺的 github.io 线上预览**，也没有开通付费服务。正式网站 `https://yujia-liu.com/` 仍由原 Azure 网站提供；后续托管可独立选择。本地开发服务器不需要公开暴露到网络。
+工作流通过官方 `actions/configure-pages` 读取实际站点的 `origin` 和 `base_path`，再传给 Astro，而不是把项目地址写死在模板里。目前使用 `https://haroldvandy2013.github.io` 和 `/yujia-liu.com-astro/`；以后在 Pages 配置自定义域名后，重新运行工作流会读取新的域名和根路径。
 
-公开网站交付给浏览器的 HTML、CSS、JavaScript 和图片仍可被访客查看；源码仓库私有化不等于隐藏这些公开网页内容。
+**自定义域名留到下一步处理**：目前没有 `CNAME`，没有修改 DNS 或关闭 Azure。正式网站 `https://yujia-liu.com/` 仍由原 Azure 网站提供服务。本次不需要付费方案。
+
+## 仓库访问
+
+本仓库为 **public**，访客可阅读源码，但公开不等于允许访客直接修改：写入仍由仓库权限控制。`package.json` 的 `"private": true` 只防止误发布到 npm，和 GitHub 仓库是否公开无关，应继续保留。
+
+不要提交密钥、账户凭据或其他非公开资料。公开网站的 HTML、CSS、JavaScript 和图片也可被访客查看。本地开发服务器无需公开暴露到网络。
 
 ## 资源与归属
 
